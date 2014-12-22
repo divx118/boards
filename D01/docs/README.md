@@ -123,15 +123,9 @@ where each component below is physically located.
 <a name="solution"/> 
 ##D01 Software Solution and Status 
 
-The software architecture on D01 is like following:
-
-* [UEFI](#uefi)
-* [BootWrapper](#bootwrapper)
-* [GRUB](#grub)
-* [EFI Stub](#stub)
-* [Kernel](#kernel)
-* [Distributions](#osv)  
-* [Toolchain](#toolchain)
+The software architecture on D01 is consisted of [UEFI](#uefi), [BootWrapper](#bootwrapper)  
+, [GRUB](#grub), [EFI Stub](#stub), [Kernel](#kernel), [Distributions](#osv) and   
+[Toolchain](#toolchain). The big picture is like following:
 
 
           +--------------------------+ +-----+
