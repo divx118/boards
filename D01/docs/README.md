@@ -59,6 +59,8 @@
         * [launch GRUB in the UEFI shell](#entergrub)
     * [KVM on D01](#kvm)
     * [Xen on D01](#xen)
+* [Reference](#refer)
+
 
 <a name="hardware"/>
 ##D01 Board Hardware Featuers
@@ -927,3 +929,9 @@ Steps to build and run guest:
 
 <a name="xen"/>
 ###Xen on D01
+
+
+<a name="refer"/>
+##Reference
+https://wiki.linaro.org/Boards/D01
+https://wiki.linaro.org/LEG/Engineering/Kernel/ACPI/ACPIviaEFI
