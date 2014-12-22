@@ -67,48 +67,52 @@
 
 Major hardware features of D01 are listed here.  
          
-        +---------------------------+--------------------------------------------------------------------------+
-        |Features                   | Description                                                              |
-        +---------------------------+--------------------------------------------------------------------------+
-        |Processors                 | Integrated 16 x ARM Cortex-A15 CPU Core @ max. 1.5GHz                    |
-        |                           | Support for up to 84000 DMIPS                                            |
-        |                           | Support for CPU configuration as AMP/SMP                                 |
-        |                           | Configurable Big or Littile endian,default Little endian                 |
-        |                           | Support ARMv7-A instruction set                                          |
-        |                           | Support float VFPv4 instruction set                                      |
-        +---------------------------+--------------------------------------------------------------------------+
-        |Memory                     | Two 64bit DDR3 DRAM Dual Inline Memory, Module(DIMM) sockets:(2)&(3)     |
-        |                           | Maximum frequency of 1600 MHz                                            |
-        |                           | Maximum capacity of 64GB                                                 |
-        |                           | preassembled capacity:16GB                                               |
-        |                           | Built-in two 1Gb NOR Flash; only one NOR flash could use by software:(29)|
-        |                           | Built-in two 512MB NAND Flash:(30)                                       |
-        +---------------------------+--------------------------------------------------------------------------+
-        |GPU                        | None                                                                     |
-        +---------------------------+--------------------------------------------------------------------------+
-        |Peripheral Interfaces      | TWO USB2.0 Host port:(11)                                                |
-        |                           | Two UART interfaces:(12)&(13)                                            |
-        |                           | Four I2C interfaces                                                      |
-        |                           | One SPI interface, supporting four CSs                                   |
-        |                           | One SD card interface:(10)                                               |
-        |                           | GPIO: eight LED interfaces:(26);eight switchs:(25)                       |
-        |                           | Three SATA interfaces(2.5in SATA 3.0 6Gbps):(4)&(5)&(6)                  |
-        |                           | Tracer Connector x2:(19)&(20)                                            |
-        |                           | One JTAG interfaces( 5x2 pin CPU Connector, ARM Connector):(24)          |
-        +---------------------------+--------------------------------------------------------------------------+
-        |BIOS                       | BIOS resident in NOR Flash                                               |
-        |                           | Support for update with FTP                                              |
-        +---------------------------+--------------------------------------------------------------------------+
-        |LAN                        | Two 10/100/1000Mbit/s Gigabit Ethernet ports:(15)&(16)                   |
-        |                           | One 10/100Mbit/s FE port:(14)                                            |
-        +---------------------------+--------------------------------------------------------------------------+
-        |Hardware Monitor Subsystem | Power consumption sense                                                  |
-        +---------------------------+--------------------------------------------------------------------------+
-        |Input Devices              | None                                                                     |
-        +---------------------------+--------------------------------------------------------------------------+
-        |Other                      | One hardware button for power-off:(8)                                    |
-        |                           | One hardware button for reset:(9)                                        |
-        +---------------------------+--------------------------------------------------------------------------+
+        +-----------+----------------------------------------------------------+
+        |Features   | Description                                              |
+        +-----------+----------------------------------------------------------|
+        |Processors | Integrated 16 x ARM Cortex-A15 CPU Core @ max. 1.5GHz    |
+        |           | Support for up to 84000 DMIPS                            |
+        |           | Support for CPU configuration as AMP/SMP                 |
+        |           | Configurable Big or Littile endian,default Little endian |
+        |           | Support ARMv7-A instruction set                          |
+        |           | Support float VFPv4 instruction set                      |
+        +-----------+----------------------------------------------------------+
+        |Memory     | Two 64bit DDR3 DRAM Dual Inline                          |
+        |           | Memory Module(DIMM) sockets:(2)&(3)                      |
+        |           | Maximum frequency of 1600 MHz                            |
+        |           | Maximum capacity of 64GB                                 |
+        |           | preassembled capacity:16GB                               |
+        |           | Built-in two 1Gb NOR Flash;                              |
+        |           | only one NOR flash could use by software:(29)            |
+        |           | Built-in two 512MB NAND Flash:(30)                       |
+        +-----------+----------------------------------------------------------+
+        |GPU        | None                                                     |
+        +-----------+----------------------------------------------------------+
+        |Peripheral | TWO USB2.0 Host port:(11)                                |
+        |Interfaces | Two UART interfaces:(12)&(13)                            |
+        |           | Four I2C interfaces                                      |
+        |           | One SPI interface, supporting four CSs                   |
+        |           | One SD card interface:(10)                               |
+        |           | GPIO: eight LED interfaces:(26);eight switchs:(25)       |
+        |           | Three SATA interfaces(2.5in SATA 3.0 6Gbps):(4)&(5)&(6)  |
+        |           | Tracer Connector x2:(19)&(20)                            |
+        |           | One JTAG interfaces(5x2 pin, ARM Connector):(24)         |
+        +-----------+----------------------------------------------------------+
+        |BIOS       | BIOS resident in NOR Flash                               |
+        |           | Support for update with FTP                              |
+        +-----------+----------------------------------------------------------+
+        |LAN        | Two 10/100/1000Mbit/s Gigabit Ethernet ports:(15)&(16)   |
+        |           | One 10/100Mbit/s FE port:(14)                            |
+        +-----------+----------------------------------------------------------+
+        |Hardware   | Power consumption sense                                  |
+        |Monitor    |                                                          |
+        +-----------+----------------------------------------------------------+
+        |Input      | None                                                     |
+        |Devices    |                                                          |
+        +-----------+----------------------------------------------------------+
+        |Other      | One hardware button for power-off:(8)                    |
+        |           | One hardware button for reset:(9)                        |
+        +-----------+----------------------------------------------------------+
 
 <a name="pic"/>
 Refer to the following picture to know  
@@ -151,27 +155,27 @@ And you could download the binary from the link:
 
         https://github.com/hisilicon/boards/tree/master/D01/release
 
-        +------------------+----------------------------------------+
-        |  filename		   |    description                         |
-        +------------------+----------------------------------------+
-        |  D01.fd          |    UEFI binary                         |
-        +------------------+----------------------------------------+
-        |  .text		   |	bootwrapper, HYP switch part        |
-        +------------------+----------------------------------------+
-        |  .monitor	       |	bootwrapper, monitor part           |
-        +------------------+----------------------------------------+
-        |  grub2.efi       |    grub binary                         |
-        +------------------+----------------------------------------+
-        |  grub.cfg        |    grub configure                      |
-        +------------------+----------------------------------------+
-        |  .kernel		   |	zImage, with dtb concatenatea       |
-        +------------------+----------------------------------------+
-        |  zImage          |    kernel image                        |
-        +------------------+----------------------------------------+
-        |  hip04-d01.dtb   |    D01 device tree bianry              |
-        +------------------+----------------------------------------+
-        |  .filesystem	   |	initramfs stored in NAND            |
-        +------------------+----------------------------------------+
+        +------------------+------------------------------------+       
+        |  filename        |    description                     |
+        +------------------+------------------------------------+       
+        |  D01.fd          |    UEFI binary                     |
+        +------------------+------------------------------------+       
+        |  .text           |	bootwrapper, HYP switch part    |   
+        +------------------+------------------------------------+       
+        |  .monitor	       |	bootwrapper, monitor part       |
+        +------------------+------------------------------------+       
+        |  grub2.efi       |    grub binary                     |
+        +------------------+------------------------------------+       
+        |  grub.cfg        |    grub configure                  |       
+        +------------------+------------------------------------+       
+        |  .kernel         |	zImage, with dtb concatenatea   |   
+        +------------------+------------------------------------+       
+        |  zImage          |    kernel image                    |
+        +------------------+------------------------------------+       
+        |  hip04-d01.dtb   |    D01 device tree bianry          |   
+        +------------------+------------------------------------+       
+        |  .filesystem	   |	initramfs stored in NAND        |   
+        +------------------+------------------------------------+       
 
 Linaro also provide a monthly release for it:
 
@@ -270,15 +274,15 @@ Linaro also provide a monthly release for it:
 * Linux Distributions: each distribution is downloaded from itself website   
 	or from Linaro.
 
-        +-----------+----------------------------------------------------------------+
-        |  Ubuntu   |  http://releases.linaro.org/latest/ubuntu                      |
-        +-----------+----------------------------------------------------------------+
-        |  OpenSuse |                                                                |
-        +-----------+----------------------------------------------------------------+
-        |  Fedora   |                                                                |
-        +-----------+----------------------------------------------------------------+
-        |  Debian   |                                                                |
-        +-----------+----------------------------------------------------------------+
+        +-----------+------------------------------------------------+
+        |  Ubuntu   |  http://releases.linaro.org/latest/ubuntu      |
+        +-----------+------------------------------------------------+
+        |  OpenSuse |                                                |
+        +-----------+------------------------------------------------+
+        |  Fedora   |                                                |
+        +-----------+------------------------------------------------+
+        |  Debian   |                                                |
+        +-----------+------------------------------------------------+
 
     But the NAND Rootfs is created by ourselves and it could download from:
         
@@ -893,6 +897,11 @@ When booting D01, enter into UEFI Shell, then input these commands in turn:
 		5      //Return to main menu
 		3      //GRUB
 
+
+A quick view about GRUB booting is like following:
+
+<img src="./pic/d01-grub.png" style="width:700px;height:300px;margin-left:30px"/> 
+
 <a name="kvm"/>
 ###KVM on D01
 
@@ -933,5 +942,6 @@ Steps to build and run guest:
 
 <a name="refer"/>
 ##Reference
-https://wiki.linaro.org/Boards/D01
-https://wiki.linaro.org/LEG/Engineering/Kernel/ACPI/ACPIviaEFI
+
+* https://wiki.linaro.org/Boards/D01
+* https://wiki.linaro.org/LEG/Engineering/Kernel/ACPI/ACPIviaEFI
